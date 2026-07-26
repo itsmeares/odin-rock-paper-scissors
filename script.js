@@ -61,9 +61,11 @@ function playGame() {
     playRound(getHumanChoice(), getComputerChoice());
     console.log(`You won ${humanScore} rounds and lost ${computerScore} rounds.`);
 
-    return humanScore > computerScore 
-        ? "Wow man you are so good at this!"
-        : "Just close your PC, you lost to a computer...";
+    if (humanScore > computerScore) {
+        return console.log("Wow man you are so good at this! You won the game!");
+    } else {
+        return console.log("Just close your PC, you lost to a computer...");
+    }
 }
 
 playGame();

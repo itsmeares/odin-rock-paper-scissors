@@ -1,3 +1,6 @@
+let humanScore = 0;
+let computerScore = 0;
+
 function getComputerChoice() {
     // get a random number between 0 - 1
     let randomNumber = Math.random();

@@ -20,4 +20,33 @@ function getComputerChoice() {
 function getHumanChoice() {
     // prompt the user for an input
     let humanChoice = prompt("What's your choice?", "");
+    return humanChoice; // Make sure to return the choice
 }
+
+function playRound(humanChoice, computerChoice) {
+    // get humanChoice in lowercase
+    humanChoice = humanChoice.toLowerCase();
+    // get computerChoice in lowercase cuz why not
+    computerChoice = computerChoice.toLowerCase();
+    
+    if (humanChoice === "rock" && computerChoice === "scissors") {
+        // human rock, computer scissors = human win
+        console.log("You won!");
+    } else if (humanChoice === "paper" && computerChoice === "rock") {
+        // human paper, computer rock = human win
+        console.log("You won!");
+    } else if (humanChoice === "scissors" && computerChoice === "paper") {
+        // human scissors, computer paper = human win
+        console.log("You won!");
+    } else {
+        // otherwise computer win (human loss)
+        console.log("You lost, loser!");
+    }
+    // log a string value representing the round winner
+    // increment humanScore or computerScore based on winner
+}
+
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
+
+playRound(humanSelection, computerSelection);
